@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-// import './App.css'
+import './App.css';
 import UseFetch from './Hooks/UseFetch';
 import LocationData from './components/LocationData';
 import ResidentCard from './components/ResidentCard';

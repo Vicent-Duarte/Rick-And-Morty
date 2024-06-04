@@ -1,4 +1,4 @@
-/* .resident {
+.resident {
     background-color: #072226;
     width: 250px;
     border-radius: 20px;
@@ -56,7 +56,7 @@
 .resident__item span:first-child {
     padding-left: 20px;
     color: gray;
-} */
+}
 
 .resident{
     background-color: #072226;

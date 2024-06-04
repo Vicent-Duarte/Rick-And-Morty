@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 import axios from "axios";
 
 const UseFetch = () => {
@@ -22,4 +22,4 @@ const UseFetch = () => {
     return [apiData, getApi, isLoading, hasError];
 }
 
-export default UseFetch
+export default UseFetch;
