@@ -1,15 +1,29 @@
 .location {
     background-color: #072226;
+    border: 1px solid color(#072226);
     padding: 20px;
     border-radius: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    transition: transform .5s,
+                box-shadow .5s;
+}
+
+.location:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #7CBA24;
+    transition: transform .5s,
+                box-shadow .5s;
 }
 
 .location__name {
     color: #7CBA24;
+    text-align: center;
 }
 
 .location__list {
@@ -20,7 +34,9 @@
 }
 
 .location__item {
+    width: 150px;
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     gap: 5px;

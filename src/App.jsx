@@ -10,9 +10,8 @@ function App() {
 
   const [location, getLocation, isLoading, hasError] = UseFetch();
 
-
   useEffect(() => {
-    const url = `hello-vicenthttps://rickandmortyapi.com/api/location/${inputValue}`;
+    const url = `https://rickandmortyapi.com/api/location/${inputValue}`;
 
     getLocation(url);
 
@@ -43,12 +42,12 @@ function App() {
           <div className='app'>
             <img className='app__fondo' src="./img-fondo.webp" alt="imagen" />
             <form className='app__form' onSubmit={handleSubmit}>
-              <input className='app__input' type="text" ref={textInput} />
+              <input className='app__input' type="number" min={1} max={126} ref={textInput} />
               <button className='app__btn'>Search</button>
             </form>
             {
               hasError || inputValue === '0' ?
-                <h2> Hey! you must provide an id from 1 to 126</h2>
+                <h2> Hey! You must provide an id from 1 to 126</h2>
                 :
                 <>
                   <LocationData
@@ -59,7 +58,7 @@ function App() {
                       location?.residents.map(resident => (
                         <ResidentCard
                           key={resident}
-                          url={resident}
+                          info={resident}
                         />
                       ))
                     }

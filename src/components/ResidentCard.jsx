@@ -2,14 +2,13 @@ import React, { useEffect } from 'react';
 import UseFetch from '../Hooks/UseFetch';
 import './styles/ResidentCard.css';
 
-const ResidentCard = ({ url }) => {
+const ResidentCard = ({ info }) => {
 
     const [resident, getResident] = UseFetch();
 
     useEffect(() => {
-        getResident(url);
+        getResident(info);
     }, [])
-
 
     return (
         <article className='resident'>
@@ -31,4 +30,4 @@ const ResidentCard = ({ url }) => {
     )
 }
 
-export default ResidentCard
+export default ResidentCard;
